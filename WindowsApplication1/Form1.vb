@@ -1,7 +1,7 @@
 ﻿Public Class frmLogin
     
     Private Sub btnEntrar_Click(sender As Object, e As EventArgs) Handles btnEntrar.Click
-        user = "Marcos"
+        user = "teste"
         pass = "123456"
         If txtUser.Text <> user Then
             MsgBox("Usuário não encontrado em nosso banco de dados.", vbCritical, "Error")
