@@ -1,0 +1,13 @@
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+c:\users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmForgot.resources
+C:\Users\root\documents\visual studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMenu.resources
+C:\Users\root\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmProfessor.resources
