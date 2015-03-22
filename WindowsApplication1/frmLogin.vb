@@ -12,14 +12,15 @@
             txtUser.Text = ""
             txtPass.Text = ""
         Else
-            frmMenu.Show()
+            teste.Show()
             Me.Finalize()
         End If
 
     End Sub
 
     Private Sub lnkForgotPass_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkForgotPass.LinkClicked
-        frmProfessor.Show()
+        frmForgot.ShowDialog()
+
 
     End Sub
 
@@ -28,8 +29,10 @@
 
         sair = MsgBox("Deseja Realmente Sair?", MsgBoxStyle.YesNoCancel, "Sair do sistema?")
         If sair = vbYes Then
-            Close()
+            End
         End If
 
     End Sub
+
+  
 End Class

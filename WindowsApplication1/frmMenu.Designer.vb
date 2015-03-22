@@ -25,6 +25,12 @@ Partial Class frmMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.CadastroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfessorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TesteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DateTimePicker1
@@ -48,11 +54,44 @@ Partial Class frmMenu
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!)
-        Me.Label1.Location = New System.Drawing.Point(1, 9)
+        Me.Label1.Location = New System.Drawing.Point(1, 115)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(434, 48)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Bem Vindo Ao Sistema"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.AllowItemReorder = True
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(433, 24)
+        Me.MenuStrip1.TabIndex = 2
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'CadastroToolStripMenuItem
+        '
+        Me.CadastroToolStripMenuItem.Name = "CadastroToolStripMenuItem"
+        Me.CadastroToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.CadastroToolStripMenuItem.Text = "Cadastro"
+        '
+        'ProfessorToolStripMenuItem
+        '
+        Me.ProfessorToolStripMenuItem.Name = "ProfessorToolStripMenuItem"
+        Me.ProfessorToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ProfessorToolStripMenuItem.Text = "Professor"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(183, 22)
+        Me.ToolStripMenuItem1.Text = "ToolStripMenuItem1"
+        '
+        'TesteToolStripMenuItem
+        '
+        Me.TesteToolStripMenuItem.Name = "TesteToolStripMenuItem"
+        Me.TesteToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.TesteToolStripMenuItem.Text = "teste"
         '
         'frmMenu
         '
@@ -62,13 +101,22 @@ Partial Class frmMenu
         Me.ClientSize = New System.Drawing.Size(433, 329)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMenu"
         Me.Text = "Secretaria"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents CadastroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProfessorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TesteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
