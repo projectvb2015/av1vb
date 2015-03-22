@@ -34,13 +34,9 @@ Partial Class frmProfessor
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.txtCpf = New System.Windows.Forms.TextBox()
-        Me.cmbDia = New System.Windows.Forms.ComboBox()
-        Me.cmbAno = New System.Windows.Forms.ComboBox()
-        Me.cmbMes = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtRg = New System.Windows.Forms.TextBox()
         Me.lblCep = New System.Windows.Forms.Label()
-        Me.txtCep = New System.Windows.Forms.TextBox()
         Me.lblRua = New System.Windows.Forms.Label()
         Me.txtRua = New System.Windows.Forms.TextBox()
         Me.txtBairro = New System.Windows.Forms.TextBox()
@@ -56,6 +52,7 @@ Partial Class frmProfessor
         Me.lblNacionalidade = New System.Windows.Forms.Label()
         Me.cmbNacionalidade = New System.Windows.Forms.ComboBox()
         Me.pnlDadosPessoais = New System.Windows.Forms.Panel()
+        Me.mtbDataNasc = New System.Windows.Forms.MaskedTextBox()
         Me.txtEmailProf = New System.Windows.Forms.TextBox()
         Me.lblEmailProf = New System.Windows.Forms.Label()
         Me.cmbEtnia = New System.Windows.Forms.ComboBox()
@@ -72,6 +69,7 @@ Partial Class frmProfessor
         Me.cmbMesRg = New System.Windows.Forms.ComboBox()
         Me.lblDataEmissao = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.mtbCep = New System.Windows.Forms.MaskedTextBox()
         Me.txtCelProf = New System.Windows.Forms.TextBox()
         Me.txtDddCelProf = New System.Windows.Forms.TextBox()
         Me.lblCelProf = New System.Windows.Forms.Label()
@@ -184,31 +182,6 @@ Partial Class frmProfessor
         Me.txtCpf.Size = New System.Drawing.Size(152, 20)
         Me.txtCpf.TabIndex = 9
         '
-        'cmbDia
-        '
-        Me.cmbDia.FormattingEnabled = True
-        Me.cmbDia.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17"})
-        Me.cmbDia.Location = New System.Drawing.Point(126, 114)
-        Me.cmbDia.Name = "cmbDia"
-        Me.cmbDia.Size = New System.Drawing.Size(41, 21)
-        Me.cmbDia.TabIndex = 10
-        '
-        'cmbAno
-        '
-        Me.cmbAno.FormattingEnabled = True
-        Me.cmbAno.Location = New System.Drawing.Point(220, 114)
-        Me.cmbAno.Name = "cmbAno"
-        Me.cmbAno.Size = New System.Drawing.Size(64, 21)
-        Me.cmbAno.TabIndex = 11
-        '
-        'cmbMes
-        '
-        Me.cmbMes.FormattingEnabled = True
-        Me.cmbMes.Location = New System.Drawing.Point(173, 114)
-        Me.cmbMes.Name = "cmbMes"
-        Me.cmbMes.Size = New System.Drawing.Size(41, 21)
-        Me.cmbMes.TabIndex = 12
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -233,13 +206,6 @@ Partial Class frmProfessor
         Me.lblCep.Size = New System.Drawing.Size(31, 13)
         Me.lblCep.TabIndex = 15
         Me.lblCep.Text = "CEP:"
-        '
-        'txtCep
-        '
-        Me.txtCep.Location = New System.Drawing.Point(40, 13)
-        Me.txtCep.Name = "txtCep"
-        Me.txtCep.Size = New System.Drawing.Size(123, 20)
-        Me.txtCep.TabIndex = 16
         '
         'lblRua
         '
@@ -323,7 +289,10 @@ Partial Class frmProfessor
         '
         'cmbUf
         '
+        Me.cmbUf.DropDownHeight = 90
         Me.cmbUf.FormattingEnabled = True
+        Me.cmbUf.IntegralHeight = False
+        Me.cmbUf.Items.AddRange(New Object() {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PR", "PB", "PA", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SE", "SP", "TO"})
         Me.cmbUf.Location = New System.Drawing.Point(345, 75)
         Me.cmbUf.Name = "cmbUf"
         Me.cmbUf.Size = New System.Drawing.Size(47, 21)
@@ -332,14 +301,14 @@ Partial Class frmProfessor
         'lblTituloProfDados
         '
         Me.lblTituloProfDados.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblTituloProfDados.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTituloProfDados.BackColor = System.Drawing.SystemColors.HotTrack
         Me.lblTituloProfDados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblTituloProfDados.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.lblTituloProfDados.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.lblTituloProfDados.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.lblTituloProfDados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblTituloProfDados.Location = New System.Drawing.Point(12, 46)
+        Me.lblTituloProfDados.Location = New System.Drawing.Point(12, 38)
         Me.lblTituloProfDados.Name = "lblTituloProfDados"
-        Me.lblTituloProfDados.Size = New System.Drawing.Size(794, 33)
+        Me.lblTituloProfDados.Size = New System.Drawing.Size(794, 35)
         Me.lblTituloProfDados.TabIndex = 28
         Me.lblTituloProfDados.Text = "Dados Pessoais"
         Me.lblTituloProfDados.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -365,6 +334,7 @@ Partial Class frmProfessor
         '
         Me.pnlDadosPessoais.BackColor = System.Drawing.Color.Transparent
         Me.pnlDadosPessoais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlDadosPessoais.Controls.Add(Me.mtbDataNasc)
         Me.pnlDadosPessoais.Controls.Add(Me.txtEmailProf)
         Me.pnlDadosPessoais.Controls.Add(Me.lblEmailProf)
         Me.pnlDadosPessoais.Controls.Add(Me.cmbEtnia)
@@ -392,15 +362,21 @@ Partial Class frmProfessor
         Me.pnlDadosPessoais.Controls.Add(Me.RadioButton1)
         Me.pnlDadosPessoais.Controls.Add(Me.RadioButton2)
         Me.pnlDadosPessoais.Controls.Add(Me.txtCpf)
-        Me.pnlDadosPessoais.Controls.Add(Me.cmbDia)
-        Me.pnlDadosPessoais.Controls.Add(Me.cmbAno)
-        Me.pnlDadosPessoais.Controls.Add(Me.cmbMes)
         Me.pnlDadosPessoais.Controls.Add(Me.Label1)
         Me.pnlDadosPessoais.Controls.Add(Me.txtRg)
         Me.pnlDadosPessoais.Location = New System.Drawing.Point(12, 66)
         Me.pnlDadosPessoais.Name = "pnlDadosPessoais"
         Me.pnlDadosPessoais.Size = New System.Drawing.Size(794, 170)
-        Me.pnlDadosPessoais.TabIndex = 31
+        Me.pnlDadosPessoais.TabIndex = 8
+        '
+        'mtbDataNasc
+        '
+        Me.mtbDataNasc.Location = New System.Drawing.Point(122, 114)
+        Me.mtbDataNasc.Mask = "00/00/0000"
+        Me.mtbDataNasc.Name = "mtbDataNasc"
+        Me.mtbDataNasc.Size = New System.Drawing.Size(128, 20)
+        Me.mtbDataNasc.TabIndex = 47
+        Me.mtbDataNasc.ValidatingType = GetType(Date)
         '
         'txtEmailProf
         '
@@ -437,8 +413,10 @@ Partial Class frmProfessor
         '
         'cmbOrgaoRg
         '
+        Me.cmbOrgaoRg.DropDownHeight = 90
         Me.cmbOrgaoRg.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cmbOrgaoRg.FormattingEnabled = True
+        Me.cmbOrgaoRg.IntegralHeight = False
         Me.cmbOrgaoRg.Location = New System.Drawing.Point(642, 84)
         Me.cmbOrgaoRg.Name = "cmbOrgaoRg"
         Me.cmbOrgaoRg.Size = New System.Drawing.Size(76, 21)
@@ -479,7 +457,11 @@ Partial Class frmProfessor
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownHeight = 90
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.ComboBox1.IntegralHeight = False
+        Me.ComboBox1.Items.AddRange(New Object() {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PR", "PB", "PA", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SE", "SP", "TO"})
         Me.ComboBox1.Location = New System.Drawing.Point(500, 85)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(43, 21)
@@ -496,7 +478,9 @@ Partial Class frmProfessor
         '
         'cmbDiaRg
         '
+        Me.cmbDiaRg.DropDownHeight = 90
         Me.cmbDiaRg.FormattingEnabled = True
+        Me.cmbDiaRg.IntegralHeight = False
         Me.cmbDiaRg.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17"})
         Me.cmbDiaRg.Location = New System.Drawing.Point(297, 85)
         Me.cmbDiaRg.Name = "cmbDiaRg"
@@ -505,7 +489,9 @@ Partial Class frmProfessor
         '
         'cmbAnoRg
         '
+        Me.cmbAnoRg.DropDownHeight = 90
         Me.cmbAnoRg.FormattingEnabled = True
+        Me.cmbAnoRg.IntegralHeight = False
         Me.cmbAnoRg.Location = New System.Drawing.Point(391, 85)
         Me.cmbAnoRg.Name = "cmbAnoRg"
         Me.cmbAnoRg.Size = New System.Drawing.Size(64, 21)
@@ -513,7 +499,9 @@ Partial Class frmProfessor
         '
         'cmbMesRg
         '
+        Me.cmbMesRg.DropDownHeight = 90
         Me.cmbMesRg.FormattingEnabled = True
+        Me.cmbMesRg.IntegralHeight = False
         Me.cmbMesRg.Location = New System.Drawing.Point(344, 85)
         Me.cmbMesRg.Name = "cmbMesRg"
         Me.cmbMesRg.Size = New System.Drawing.Size(41, 21)
@@ -532,6 +520,7 @@ Partial Class frmProfessor
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.mtbCep)
         Me.Panel1.Controls.Add(Me.txtCelProf)
         Me.Panel1.Controls.Add(Me.txtDddCelProf)
         Me.Panel1.Controls.Add(Me.lblCelProf)
@@ -541,7 +530,6 @@ Partial Class frmProfessor
         Me.Panel1.Controls.Add(Me.cmbPaisProf)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.txtCep)
         Me.Panel1.Controls.Add(Me.lblCep)
         Me.Panel1.Controls.Add(Me.lblRua)
         Me.Panel1.Controls.Add(Me.cmbUf)
@@ -558,6 +546,14 @@ Partial Class frmProfessor
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(794, 134)
         Me.Panel1.TabIndex = 32
+        '
+        'mtbCep
+        '
+        Me.mtbCep.Location = New System.Drawing.Point(40, 13)
+        Me.mtbCep.Mask = "00000-999"
+        Me.mtbCep.Name = "mtbCep"
+        Me.mtbCep.Size = New System.Drawing.Size(100, 20)
+        Me.mtbCep.TabIndex = 37
         '
         'txtCelProf
         '
@@ -607,7 +603,10 @@ Partial Class frmProfessor
         '
         'cmbPaisProf
         '
+        Me.cmbPaisProf.DropDownHeight = 90
         Me.cmbPaisProf.FormattingEnabled = True
+        Me.cmbPaisProf.IntegralHeight = False
+        Me.cmbPaisProf.Items.AddRange(New Object() {"Afeganistão", "África do Sul", "Akrotiri", "Albânia", "Alemanha", "Andorra", "Angola", "Anguila", "Antárctida", "Antígua e Barbuda", "Antilhas Neerlandesas", "Arábia Saudita", "Arctic Ocean", "Argélia", "Argentina", "Arménia", "Aruba", "Ashmore and Cartier Islands", "Atlantic Ocean", "Austrália", "Áustria", "Azerbaijão", "Baamas", "Bangladeche", "Barbados", "Barém", "Bélgica", "Belize", "Benim", "Bermudas", "Bielorrússia", "Birmânia", "Bolívia", "Bósnia e Herzegovina", "Botsuana", "Brasil", "Brunei", "Bulgária", "Burquina Faso", "Burúndi", "Butão", "Cabo Verde", "Camarões", "Camboja", "Canadá", "Catar", "Cazaquistão", "Chade", "Chile", "China", "Chipre", "Clipperton Island", "Colômbia", "Comores", "Congo-Brazzaville", "Congo-Kinshasa", "Coral Sea Islands", "Coreia do Norte", "Coreia do Sul", "Costa do Marfim", "Costa Rica", "Croácia", "Cuba", "Dhekelia", "Dinamarca", "Domínica", "Egipto", "Emiratos Árabes Unidos", "Equador", "Eritreia", "Eslováquia", "Eslovénia", "Espanha", "Estados Unidos", "Estónia", "Etiópia", "Faroé", "Fiji", "Filipinas", "Finlândia", "França", "Gabão", "Gâmbia", "Gana", "Gaza Strip", "Geórgia", "Geórgia do Sul e Sandwich do Sul", "Gibraltar", "Granada", "Grécia", "Gronelândia", "Guame", "Guatemala", "Guernsey", "Guiana", "Guiné", "Guiné Equatorial", "Guiné-Bissau", "Haiti", "Honduras", "Hong Kong", "Hungria", "Iémen", "Ilha Bouvet", "Ilha do Natal", "Ilha Norfolk", "Ilhas Caimão", "Ilhas Cook", "Ilhas dos Cocos", "Ilhas Falkland", "Ilhas Heard e McDonald", "Ilhas Marshall", "Ilhas Salomão", "Ilhas Turcas e Caicos", "Ilhas Virgens Americanas", "Ilhas Virgens Britânicas", "Índia", "Indian Ocean", "Indonésia", "Irão", "Iraque", "Irlanda", "Islândia", "Israel", "Itália", "Jamaica", "Jan Mayen", "Japão", "Jersey", "Jibuti", "Jordânia", "Kuwait", "Laos", "Lesoto", "Letónia", "Líbano", "Libéria", "Líbia", "Listenstaine", "Lituânia", "Luxemburgo", "Macau", "Macedónia", "Madagáscar", "Malásia", "Malávi", "Maldivas", "Mali", "Malta", "Man, Isle of", "Marianas do Norte", "Marrocos", "Maurícia", "Mauritânia", "Mayotte", "México", "Micronésia", "Moçambique", "Moldávia", "Mónaco", "Mongólia", "Monserrate", "Montenegro", "Mundo", "Namíbia", "Nauru", "Navassa Island", "Nepal", "Nicarágua", "Níger", "Nigéria", "Niue", "Noruega", "Nova Caledónia", "Nova Zelândia", "Omã", "Pacific Ocean", "Países Baixos", "Palau", "Panamá", "Papua-Nova Guiné", "Paquistão", "Paracel Islands", "Paraguai", "Peru", "Pitcairn", "Polinésia Francesa", "Polónia", "Porto Rico", "Portugal", "Quénia", "Quirguizistão", "Quiribáti", "Reino Unido", "República Centro-Africana", "República Checa", "República Dominicana", "Roménia", "Ruanda", "Rússia", "Salvador", "Samoa", "Samoa Americana", "Santa Helena", "Santa Lúcia", "São Cristóvão e Neves", "São Marinho", "São Pedro e Miquelon", "São Tomé e Príncipe", "São Vicente e Granadinas", "Sara Ocidental", "Seicheles", "Senegal", "Serra Leoa", "Sérvia", "Singapura", "Síria", "Somália", "Southern Ocean", "Spratly Islands", "Sri Lanca", "Suazilândia", "Sudão", "Suécia", "Suíça", "Suriname", "Svalbard e Jan Mayen", "Tailândia", "Taiwan", "Tajiquistão", "Tanzânia", "Território Britânico do Oceano Índico", "Territórios Austrais Franceses", "Timor Leste", "Togo", "Tokelau", "Tonga", "Trindade e Tobago", "Tunísia", "Turquemenistão", "Turquia", "Tuvalu", "Ucrânia", "Uganda", "União Europeia", "Uruguai", "Usbequistão", "Vanuatu", "Vaticano", "Venezuela", "Vietname", "Wake Island", "Wallis e Futuna", "West Bank", "Zâmbia", "Zimbabué"})
         Me.cmbPaisProf.Location = New System.Drawing.Point(432, 75)
         Me.cmbPaisProf.Name = "cmbPaisProf"
         Me.cmbPaisProf.Size = New System.Drawing.Size(130, 21)
@@ -634,10 +633,10 @@ Partial Class frmProfessor
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Label2.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label2.Location = New System.Drawing.Point(12, 240)
         Me.Label2.Name = "Label2"
@@ -656,9 +655,9 @@ Partial Class frmProfessor
         Me.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(785, 2)
+        Me.btnClose.Location = New System.Drawing.Point(786, 2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(32, 41)
+        Me.btnClose.Size = New System.Drawing.Size(31, 33)
         Me.btnClose.TabIndex = 33
         Me.ToolTip1.SetToolTip(Me.btnClose, "Fechar?")
         Me.btnClose.UseVisualStyleBackColor = False
@@ -717,13 +716,9 @@ Partial Class frmProfessor
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents txtCpf As System.Windows.Forms.TextBox
-    Friend WithEvents cmbDia As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbAno As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbMes As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtRg As System.Windows.Forms.TextBox
     Friend WithEvents lblCep As System.Windows.Forms.Label
-    Friend WithEvents txtCep As System.Windows.Forms.TextBox
     Friend WithEvents lblRua As System.Windows.Forms.Label
     Friend WithEvents txtRua As System.Windows.Forms.TextBox
     Friend WithEvents txtBairro As System.Windows.Forms.TextBox
@@ -769,4 +764,6 @@ Partial Class frmProfessor
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents btnLimpar As System.Windows.Forms.Button
     Friend WithEvents btnSalvar As System.Windows.Forms.Button
+    Friend WithEvents mtbDataNasc As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents mtbCep As System.Windows.Forms.MaskedTextBox
 End Class

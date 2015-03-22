@@ -12,7 +12,7 @@
             txtUser.Text = ""
             txtPass.Text = ""
         Else
-            teste.Show()
+            frmProfessor.Show()
             Me.Finalize()
         End If
 
@@ -35,4 +35,5 @@
     End Sub
 
   
+
 End Class
