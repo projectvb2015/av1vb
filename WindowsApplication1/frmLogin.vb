@@ -12,7 +12,7 @@
             txtUser.Text = ""
             txtPass.Text = ""
         Else
-            frmProfessor.Show()
+            frmAluno.Show()
             Me.Finalize()
         End If
 
@@ -36,4 +36,7 @@
 
   
 
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

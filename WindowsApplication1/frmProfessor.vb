@@ -18,4 +18,12 @@
         diaNasc = cmbDiaRg.SelectedItem
         MsgBox(diaNasc)
     End Sub
+
+    Private Sub btnLimpar_Click(sender As Object, e As EventArgs) Handles btnLimpar.Click
+
+    End Sub
+
+    Private Sub frmProfessor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
