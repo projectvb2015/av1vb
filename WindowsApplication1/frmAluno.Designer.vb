@@ -913,6 +913,7 @@ Partial Class frmAluno
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlDadosPessoais)
         Me.Controls.Add(Me.lblTituloProfDados)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAluno"
         Me.Text = "frmAluno"
         Me.Panel1.ResumeLayout(False)
